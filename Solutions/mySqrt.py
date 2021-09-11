@@ -1,24 +1,12 @@
-import math
-
-
+from math import *
 
 def mySqrt(x):
-    fin = []
-    if x == 1:
+    if x <= 1:
         return x
-    for j in range(2, x//2):
-        temp = j * j
-        if temp <= x:
-            fin.append(j)
-    if len(fin) == 0:
-        return 0
     else:
-        return (fin[-1])
+        return sqrt(x) // 1
 
-
-
-
-mySqrt(16)
-mySqrt(8)
-mySqrt(4)
-
+sqrt(16)
+sqrt(10)
+sqrt(8)
+sqrt(4)
