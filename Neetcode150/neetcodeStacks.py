@@ -18,8 +18,16 @@ def isValid(s):
     # Logic, first half goes in the stack, then the second half should check the dictionary for 
     for j in s:
         if j in checker:
-            print("inside")
-            
-        
+            if stack and stack[-1] == checker[j]:
+                stack.pop()
+            else:
+                return False
+        else:
+            stack.append(j)
     
-is
+    if len(stack) != 0:
+        return False
+    return True
+    
+isValid("(([{(())}]))")
+isValid("(")
