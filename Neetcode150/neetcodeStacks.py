@@ -36,16 +36,17 @@ def isValid(s):
 class MinStack:
 
     def __init__(self):
-        
+        self.stack = []
 
     def push(self, val: int) -> None:
-        
+        self.stack.append(val)
+        self.stack.reverse()
 
     def pop(self) -> None:
-        
+        self.stack.pop()
 
     def top(self) -> int:
-        
+        return self.stack[0]
 
     def getMin(self) -> int:
-        
+        return min(self.stack)
