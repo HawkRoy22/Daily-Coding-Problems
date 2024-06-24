@@ -39,11 +39,12 @@ class MinStack:
         self.stack = []
 
     def push(self, val: int) -> None:
-        self.stack.append(val)
-        self.stack.reverse()
+        print(self.stack)
+        self.stack.insert(0,val)
+        print(self.stack)
 
     def pop(self) -> None:
-        self.stack.pop()
+        self.stack.pop(0)
 
     def top(self) -> int:
         return self.stack[0]
