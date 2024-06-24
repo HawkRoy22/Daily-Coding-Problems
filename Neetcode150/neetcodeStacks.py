@@ -51,3 +51,27 @@ class MinStack:
 
     def getMin(self) -> int:
         return min(self.stack)
+
+def evalRPN(tokens):
+    fin = 0 
+    stack = []
+    operators = ['+', '-', '*', '/']
+
+    for j in tokens:
+        if j not in operators:
+            stack.append(j)
+            #stack.insert(0, j)
+        else:
+            match j:
+                case '+':
+                    fin += stack[0] + stack[1]
+                    stack.clear()
+                case '-':
+                    fin += stack[0] - stack[1]
+                    stack.clear()
+                case '*':
+                    fin += stack[0] * stack[1]
+                    stack.clear()
+                case '/':
+                    fin += stack[0] / stack[1]
+                    stack.clear()
