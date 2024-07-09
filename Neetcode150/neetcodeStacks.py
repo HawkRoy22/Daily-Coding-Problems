@@ -128,6 +128,17 @@ def dailyTemperatures(temperatures):
 
 #dailyTemperatures([30,38,30,36,35,40,2])
 #dailyTemperatures([22,21,20])
-dailyTemperatures([55,38,53,81,61,93,97,32,43,78])
+#dailyTemperatures([55,38,53,81,61,93,97,32,43,78])
 
+def reverseList(head):
+        
+    curr = head
+    prev = None
 
+    while curr: # while linked list has values
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next_node
+
+    return prev
