@@ -142,3 +142,5 @@ def reverseList(head):
         curr = next_node
 
     return prev
+
+reverseList([1,2,3])
